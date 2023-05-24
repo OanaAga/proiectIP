@@ -1,0 +1,14 @@
+C:\Users\Oana\Documents\an 3\sem2\ip\proiect\proiectState\proiectState\bin\Debug\proiectState.exe.config
+C:\Users\Oana\Documents\an 3\sem2\ip\proiect\proiectState\proiectState\bin\Debug\proiectState.exe
+C:\Users\Oana\Documents\an 3\sem2\ip\proiect\proiectState\proiectState\bin\Debug\proiectState.pdb
+C:\Users\Oana\Documents\an 3\sem2\ip\proiect\proiectState\proiectState\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Oana\Documents\an 3\sem2\ip\proiect\proiectState\proiectState\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Oana\Documents\an 3\sem2\ip\proiect\proiectState\proiectState\obj\Debug\proiectState.csproj.AssemblyReference.cache
+C:\Users\Oana\Documents\an 3\sem2\ip\proiect\proiectState\proiectState\obj\Debug\proiectState.csproj.SuggestedBindingRedirects.cache
+C:\Users\Oana\Documents\an 3\sem2\ip\proiect\proiectState\proiectState\obj\Debug\proiectState.Form1.resources
+C:\Users\Oana\Documents\an 3\sem2\ip\proiect\proiectState\proiectState\obj\Debug\proiectState.Properties.Resources.resources
+C:\Users\Oana\Documents\an 3\sem2\ip\proiect\proiectState\proiectState\obj\Debug\proiectState.csproj.GenerateResource.cache
+C:\Users\Oana\Documents\an 3\sem2\ip\proiect\proiectState\proiectState\obj\Debug\proiectState.csproj.CoreCompileInputs.cache
+C:\Users\Oana\Documents\an 3\sem2\ip\proiect\proiectState\proiectState\obj\Debug\proiectState.csproj.CopyComplete
+C:\Users\Oana\Documents\an 3\sem2\ip\proiect\proiectState\proiectState\obj\Debug\proiectState.exe
+C:\Users\Oana\Documents\an 3\sem2\ip\proiect\proiectState\proiectState\obj\Debug\proiectState.pdb

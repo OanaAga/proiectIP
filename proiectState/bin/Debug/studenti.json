@@ -1,0 +1,24 @@
+[
+  {
+    "_nume": "Catarama",
+    "_prenume": "Ovidiu",
+    "_email": "ovidiu.catarama@student.tuiasi.ro",
+    "_telefon": "0700000000",
+    "_facultate": "AC Iasi",
+    "_specializare": "CTI",
+    "_an": "3",
+    "_username": "ocatarama",
+    "_password": "u61DC3duClMKvkML7EBMSoxsaqE="
+  },
+  {
+    "_nume": "Vocurek",
+    "_prenume": "Denisa-Maria",
+    "_email": "denisa-maria.vocurek@student.tuiasi.ro",
+    "_telefon": "0700000000",
+    "_facultate": "AC Iasi",
+    "_specializare": "CTI",
+    "_an": "3",
+    "_username": "dvocurek",
+    "_password": "u61DC3duClMKvkML7EBMSoxsaqE="
+  }
+]
