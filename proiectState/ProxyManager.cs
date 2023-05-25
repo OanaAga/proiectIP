@@ -6,8 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Data.OleDb;
+using proiectState;
 
-namespace LoginRegisterProiect
+namespace proiectState
 {
     public class ProxyManager
     {

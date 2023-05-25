@@ -14,7 +14,7 @@ namespace proiectState
     public class FirmeState : IState
     {
         Form1 _form;
-        public List<Job> firme;
+        List<Job> firme;
         GroupBox anunturi = new GroupBox();
         GroupBox[] anunt ={ new GroupBox(),
             new GroupBox(),
@@ -30,9 +30,29 @@ namespace proiectState
             new GroupBox()};
         Panel panel;
         int index;
-        public Job jobCurent = new Job();
-       
-        public System.Windows.Forms.GroupBox paginaAnunturi;
+        Job jobCurent = new Job();
+
+        System.Windows.Forms.GroupBox paginaAnunturi;
+        public Job getJobCurent{
+            get
+            {
+                return jobCurent;
+            }    
+        }
+        public GroupBox getPaginaAnunturi
+        {
+            get
+            {
+                return paginaAnunturi;
+            }
+        }
+        public List<Job> getfirme
+        {
+            get
+            {
+                return firme;
+            }
+        }
         public FirmeState(Form1 form)
         {
             _form = form;
@@ -170,9 +190,9 @@ namespace proiectState
         private void Titlu_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             LinkLabel label = sender as LinkLabel;
-            jobCurent = _form._firmeState.firme.Find(element => element.NumeInternship == label.Text);
+            jobCurent = _form.getFirmeState.firme.Find(element => element.NumeInternship == label.Text);
             paginaAnunturi.Hide();
-            IState.SetState(_form._anuntCompletState, () => _form._anuntCompletState.CreeazaFereastra(_form));
+            IState.SetState(_form.getAnuntCompleteState, () => _form.getAnuntCompleteState.CreeazaFereastra(_form));
         }
         /*private void inapoi_Click(object sender, EventArgs e)
         {
@@ -182,7 +202,7 @@ namespace proiectState
         private void button_creeazaInternship(object sender, EventArgs e)
         {
             paginaAnunturi.Hide();
-            IState.SetState(_form._creeazaInternshipState, () => _form._creeazaInternshipState.CreeazaFereastra(_form));
+            IState.SetState(_form.getCreeazaInternshipState, () => _form.getCreeazaInternshipState.CreeazaFereastra(_form));
         }
         private void anunturi_Enter(object sender, EventArgs e)
         {

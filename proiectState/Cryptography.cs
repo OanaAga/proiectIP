@@ -20,7 +20,7 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace ProtectionProxy
+namespace proiectState
 {
     public class Cryptography
     {

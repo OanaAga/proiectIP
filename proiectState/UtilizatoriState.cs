@@ -17,7 +17,7 @@ namespace proiectState
     {
         Form1 _form;
         private System.ComponentModel.IContainer components = null;
-        public System.Windows.Forms.GroupBox utilizatoriMenu;
+        System.Windows.Forms.GroupBox utilizatoriMenu;
         private List<Job> _joburiFiltrate;
         int currentPhotoIndex = 0;
         List<string> _imagePaths;
@@ -38,6 +38,10 @@ namespace proiectState
 
             _form=form;
 
+        }
+        public GroupBox getUtilizatoriMenu
+        {
+            get { return utilizatoriMenu; }
         }
         public override Action CreeazaFereastra(Form1 form)
         {

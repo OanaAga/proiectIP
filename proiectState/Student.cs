@@ -1,4 +1,4 @@
-﻿namespace LoginRegisterProiect
+﻿namespace proiectState
 {
     public class Student
     {

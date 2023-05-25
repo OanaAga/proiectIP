@@ -31,7 +31,7 @@ namespace proiectState
         RadioButton radioButton1;
         RadioButton radioButton6;
         Form1 _form;
-        LoginState _loginState;
+        
         public CreeazaInternshipState(Form1 form)
         {
             _form = form;
@@ -489,15 +489,15 @@ namespace proiectState
             File.WriteAllText(jsonFile, textJson);
             MessageBox.Show("S-a adaugat un anunt nou");
             adaugareAnunt.Hide();
-            IState.SetState(_form._firmeState, () => _form._firmeState.adauga());
-            _form._firmeState.paginaAnunturi.Show();
+            IState.SetState(_form.getFirmeState, () => _form.getFirmeState.adauga());
+            _form.getFirmeState.getPaginaAnunturi.Show();
 
         }
        
         private void renunta_Click(object sender, EventArgs e)
         {
 
-            IState.SetState(_form._firmeState, () => _form._firmeState.paginaAnunturi.Show());
+            IState.SetState(_form.getFirmeState, () => _form.getFirmeState.getPaginaAnunturi.Show());
 
         }
 

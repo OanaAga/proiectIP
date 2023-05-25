@@ -1,6 +1,4 @@
-﻿using LoginRegisterProiect;
-using Newtonsoft.Json;
-using ProtectionProxy;
+﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -58,7 +56,7 @@ namespace proiectState
             System.Windows.Forms.Label label11;
             System.Windows.Forms.Label label10;
             System.Windows.Forms.Label label9;
-             System.Windows.Forms.Label label8;
+            System.Windows.Forms.Label label8;
             System.Windows.Forms.Label label7;
             System.Windows.Forms.Label label6;
             System.Windows.Forms.Label label5;
@@ -657,12 +655,12 @@ namespace proiectState
                 if (_proxyManager.GetType() == "firma")
                 {
                     _tabControl1.Hide();
-                    IState.SetState(_form._firmeState, () => _form._firmeState.CreeazaFereastra(_form));
+                    IState.SetState(_form.getFirmeState, () => _form.getFirmeState.CreeazaFereastra(_form));
                 }
                 else if (_proxyManager.GetType() == "student")
                 {
                     _tabControl1.Hide();
-                    IState.SetState(_form._utilizatoriState, () => _form._utilizatoriState.CreeazaFereastra(_form));
+                    IState.SetState(_form.getUtilizatoriState, () => _form.getUtilizatoriState.CreeazaFereastra(_form));
 
                 }
             }
@@ -692,7 +690,7 @@ namespace proiectState
             {
                 _label23.Text = "Succes!";
                 _tabControl1.Hide();
-                IState.SetState(_form._utilizatoriState, () => _form._utilizatoriState.CreeazaFereastra(_form));
+                IState.SetState(_form.getUtilizatoriState, () => _form.getUtilizatoriState.CreeazaFereastra(_form));
             }
             else
             {
@@ -717,7 +715,7 @@ namespace proiectState
             {
                 _label22.Text = "Succes!";
                 _tabControl1.Hide();
-                IState.SetState(_form._firmeState, () => _form._firmeState.CreeazaFereastra(_form));
+                IState.SetState(_form.getFirmeState, () => _form.getFirmeState.CreeazaFereastra(_form));
             }
             else
             {

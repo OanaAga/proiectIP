@@ -19,7 +19,7 @@ namespace proiectState
         }
         public override Action CreeazaFereastra(Form1 form)
         {
-            Job jobCurent = _form._firmeState.jobCurent;
+            Job jobCurent = _form.getFirmeState.getJobCurent;
             anuntComplet = new GroupBox();
             form.Controls.Add(anuntComplet);
             anuntComplet.Location = new Point(50, 50);
@@ -40,7 +40,7 @@ namespace proiectState
         private void inapoi_Click(object sender, EventArgs e)
         {
             anuntComplet.Hide();
-            IState.SetState(_form._firmeState, () => _form._firmeState.paginaAnunturi.Show());
+            IState.SetState(_form.getFirmeState, () => _form.getFirmeState.getPaginaAnunturi.Show());
         }
     }
 }

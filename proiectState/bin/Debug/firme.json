@@ -1,4 +1,4 @@
-﻿[
+[
   {
     "_name": "Breakfasteria",
     "_cui": "12345678",
@@ -6,5 +6,13 @@
     "_reprezentant": "Oana Agapie",
     "_username": "breakfasteria",
     "_password": "u61DC3duClMKvkML7EBMSoxsaqE="
+  },
+  {
+    "_name": "",
+    "_cui": "",
+    "_email": "",
+    "_reprezentant": "",
+    "_username": "",
+    "_password": "2jmj7l5rSw0yVb/vlWAYkK/YBwk="
   }
 ]

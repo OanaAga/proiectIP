@@ -12,12 +12,12 @@ namespace proiectState
 {
     public partial class Form1 : Form
     {
-        public GroupBox pagina = new GroupBox();
-        public LoginState _loginState;
+        GroupBox pagina = new GroupBox();
+        LoginState _loginState;
         public FirmeState _firmeState;
-        public CreeazaInternshipState _creeazaInternshipState;
-        public AnuntCompletState _anuntCompletState;
-        public UtilizatoriState _utilizatoriState;
+        CreeazaInternshipState _creeazaInternshipState;
+        AnuntCompletState _anuntCompletState;
+        UtilizatoriState _utilizatoriState;
         public Form1()
         {
             _loginState=new LoginState(this);
@@ -28,7 +28,44 @@ namespace proiectState
             InitializeComponent();
             IState.SetState(_loginState,()=>_loginState.CreeazaFereastra(this));
         }
-
+        public GroupBox getPagina
+        {
+            get
+            {
+                return pagina;
+            }
+        }
+        public LoginState getLoginState
+        {
+            get{
+                return _loginState;
+            }
+        }
+        public FirmeState getFirmeState
+        {
+            get
+            {
+                return _firmeState;
+            }
+        }
+        public CreeazaInternshipState getCreeazaInternshipState
+        {
+            get
+            {
+                return _creeazaInternshipState;
+            }
+        }
+        public AnuntCompletState getAnuntCompleteState
+        {
+            get
+            {
+                return _anuntCompletState;
+            }
+        }
+        public UtilizatoriState getUtilizatoriState
+        {
+            get { return _utilizatoriState;}
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
 
