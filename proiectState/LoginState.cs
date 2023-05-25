@@ -4,8 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-
-
+using System.Windows.Forms;
 
 namespace proiectState
 {
@@ -40,6 +39,7 @@ namespace proiectState
         {
             _form = form;
         }
+       
         public override Action CreeazaFereastra(Form1 form)
         {
             
@@ -642,9 +642,12 @@ namespace proiectState
             label14.Size = new System.Drawing.Size(248, 26);
             label14.TabIndex = 1;
             label14.Text = "Inregistrare Companie";
+
+
             _proxyManager = new ProxyManager();
             return null;
         }
+      
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             try

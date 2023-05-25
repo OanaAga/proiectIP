@@ -17,11 +17,13 @@ namespace proiectState
         public FirmeState _firmeState;
         CreeazaInternshipState _creeazaInternshipState;
         AnuntCompletState _anuntCompletState;
+        TabControl _tabControl1;
         UtilizatoriState _utilizatoriState;
         public Form1()
         {
             _loginState=new LoginState(this);
             _firmeState=new FirmeState(this);
+            _tabControl1 = new TabControl();
             _creeazaInternshipState=new CreeazaInternshipState(this);
             _anuntCompletState=new AnuntCompletState(this);
             _utilizatoriState = new UtilizatoriState(this);
@@ -61,6 +63,13 @@ namespace proiectState
             {
                 return _anuntCompletState;
             }
+        }
+        public TabControl getTabControl()
+        {
+            {
+                return _tabControl1;
+            }
+
         }
         public UtilizatoriState getUtilizatoriState
         {

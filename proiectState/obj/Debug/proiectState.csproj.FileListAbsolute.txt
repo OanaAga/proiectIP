@@ -25,3 +25,16 @@ D:\Cursuri\Anul III\Semestrul II\IP\proiectIP\proiectState\obj\Debug\proiectStat
 D:\Cursuri\Anul III\Semestrul II\IP\proiectIP\proiectState\obj\Debug\proiectState.csproj.CopyComplete
 D:\Cursuri\Anul III\Semestrul II\IP\proiectIP\proiectState\obj\Debug\proiectState.exe
 D:\Cursuri\Anul III\Semestrul II\IP\proiectIP\proiectState\obj\Debug\proiectState.pdb
+C:\Users\Denisa\Desktop\proiectIP\proiectState\bin\Debug\proiectState.exe.config
+C:\Users\Denisa\Desktop\proiectIP\proiectState\bin\Debug\proiectState.exe
+C:\Users\Denisa\Desktop\proiectIP\proiectState\bin\Debug\proiectState.pdb
+C:\Users\Denisa\Desktop\proiectIP\proiectState\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Denisa\Desktop\proiectIP\proiectState\obj\Debug\proiectState.csproj.AssemblyReference.cache
+C:\Users\Denisa\Desktop\proiectIP\proiectState\obj\Debug\proiectState.csproj.SuggestedBindingRedirects.cache
+C:\Users\Denisa\Desktop\proiectIP\proiectState\obj\Debug\proiectState.Form1.resources
+C:\Users\Denisa\Desktop\proiectIP\proiectState\obj\Debug\proiectState.Properties.Resources.resources
+C:\Users\Denisa\Desktop\proiectIP\proiectState\obj\Debug\proiectState.csproj.GenerateResource.cache
+C:\Users\Denisa\Desktop\proiectIP\proiectState\obj\Debug\proiectState.csproj.CoreCompileInputs.cache
+C:\Users\Denisa\Desktop\proiectIP\proiectState\obj\Debug\proiectState.csproj.CopyComplete
+C:\Users\Denisa\Desktop\proiectIP\proiectState\obj\Debug\proiectState.exe
+C:\Users\Denisa\Desktop\proiectIP\proiectState\obj\Debug\proiectState.pdb

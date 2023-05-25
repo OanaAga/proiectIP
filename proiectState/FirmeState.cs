@@ -96,8 +96,9 @@ namespace proiectState
             button2.Name = "button2";
             button2.Size = new System.Drawing.Size(225, 23);
             button2.TabIndex = 5;
-            button2.Text = "Deconectare";
+            button2.Text = "Deconecteaza-te";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += new System.EventHandler(this.button_deconectare);
             // 
             // paginaAnunturi
             // 
@@ -112,7 +113,7 @@ namespace proiectState
             paginaAnunturi.TabStop = false;
             paginaAnunturi.Enter += new System.EventHandler(anunturi_Enter);
             _form.Controls.Add(paginaAnunturi);
-            string jsonFile = "C:\\Users\\Oana\\Documents\\an 3\\sem2\\ip\\proiect\\proiectState\\proiectState\\jobs.json";
+            string jsonFile = "./jobs.json";
             string jsonContent = File.ReadAllText(jsonFile);
 
             firme = JsonConvert.DeserializeObject<List<Job>>(jsonContent);
@@ -185,6 +186,7 @@ namespace proiectState
             scrollBar.SmallChange = panel.VerticalScroll.SmallChange;
             panel.AutoScroll = true;
 
+
             return null;
         }
         private void Titlu_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -199,6 +201,14 @@ namespace proiectState
             //anuntComplet.Hide();
             //paginaAnunturi.Show();
         }*/
+        
+        private void button_deconectare(object sender, EventArgs e)
+        {
+            paginaAnunturi.Hide();
+            IState.SetState(_form.getLoginState, () => _form.getLoginState.CreeazaFereastra(_form));
+
+        }
+
         private void button_creeazaInternship(object sender, EventArgs e)
         {
             paginaAnunturi.Hide();

@@ -1,0 +1,70 @@
+﻿[
+  {
+    "nume": "Endava",
+    "limbaj": "C#",
+    "an": "III",
+    "perioada": "6 luni",
+    "timp": "4 ore",
+    "platit": "platit",
+    "numeInternship": "ServiceNow Developer",
+    "limbajN": "C#",
+    "limbajBDS": "",
+    "descriere": "Responsibilities\r\nDeveloping new modules and business flows in ServiceNow Application;\r\n Fixing defects in ServiceNow modules;\r\n Adapting existing ServiceNow modules and business flows to changing customers’ business needs;\r\n Administration and configuration of existing ServiceNow modules;\r\n Writing of documentation and procedures/ documenting the source code with comments and writing technical documentation;\r\n Implementing corrective actions;\r\n Reporting on progress, issues and problems to the supervisor;\r\n Providing lessons learned and giving suggestions to optimise the work processes\r\n\r\n Nice to have:CAD,\r\n CIS: ITSM, CSM, SP certification\r\n Experience with CSM Module and Domain Separation\r\n Experience working in Agile teams\r\n"
+  },
+  {
+    "nume": "Fortech",
+    "limbaj": "C#",
+    "an": "III",
+    "perioada": "9 luni",
+    "timp": "8 ore",
+    "platit": "platit"
+  },
+  {
+    "nume": "Amazon Development Center",
+    "limbaj": "Java",
+    "an": "III",
+    "perioada": "6 luni",
+    "timp": "8 ore",
+    "platit": "platit"
+  },
+  {
+    "nume": "Microsoft Development Center",
+    "limbaj": "C#",
+    "an": "III",
+    "perioada": "9 luni",
+    "timp": "6 ore",
+    "platit": "platit"
+  },
+  {
+    "nume": "Continental Automotive Systems",
+    "limbaj": "Kotlin",
+    "an": "II",
+    "perioada": "6 luni",
+    "timp": "4 ore",
+    "platit": "platit"
+  },
+  {
+    "nume": "IBM Romania",
+    "limbaj": "JavaScript",
+    "an": "III",
+    "perioada": "9 luni",
+    "timp": "8 ore",
+    "platit": "platit"
+  },
+  {
+    "nume": "NESS",
+    "limbaj": "C++",
+    "an": "II",
+    "perioada": "4 luni",
+    "timp": "4 ore",
+    "platit": "neplatit"
+  },
+  {
+    "nume": "NESS",
+    "limbaj": "C",
+    "an": "II",
+    "perioada": "4 luni",
+    "timp": "4 ore",
+    "platit": "neplatit"
+  }
+]

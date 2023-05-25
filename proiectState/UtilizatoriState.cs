@@ -56,6 +56,8 @@ namespace proiectState
             System.Windows.Forms.Button button1;
             System.Windows.Forms.Button button3;
             System.Windows.Forms.Button button2;
+            System.Windows.Forms.Button button4;
+
             System.Windows.Forms.Timer timer1;
             
             utilizatoriMenu=new GroupBox();
@@ -78,6 +80,7 @@ namespace proiectState
             button1 = new System.Windows.Forms.Button();
             button2 = new System.Windows.Forms.Button();
             button3 = new System.Windows.Forms.Button();
+            button4 = new System.Windows.Forms.Button();
             timer1 = new System.Windows.Forms.Timer(components);
             _flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             
@@ -244,28 +247,43 @@ namespace proiectState
             // 
             // button3
             // 
-            button3.Location = new System.Drawing.Point(1100, 90);
+            button3.Location = new System.Drawing.Point(800, 90);
             button3.Name = "button3";
             button3.Size = new System.Drawing.Size(75, 23);
             button3.TabIndex = 1;
             button3.Text = "Inainte";
             button3.UseVisualStyleBackColor = true;
             button3.Click += new System.EventHandler(button3_Click);
+
+
+            // 
+            // button4
+            //
+            button4.Location = new System.Drawing.Point(900, 90);
+            button4.Name = "button4";
+            button4.Size = new System.Drawing.Size(146, 27);
+            button4.TabIndex = 13;
+            button4.Text = "Deconecteaza-te";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += new System.EventHandler(button4_Click);
+            // 
             // 
             // flowLayoutPanel1
             // 
-            _flowLayoutPanel1.Location = new System.Drawing.Point(357, 10);
+            _flowLayoutPanel1.Location = new System.Drawing.Point(1000, 10);
             _flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             _flowLayoutPanel1.Name = "flowLayoutPanel1";
-            _flowLayoutPanel1.Size = new System.Drawing.Size(803, 110);
+            _flowLayoutPanel1.Size = new System.Drawing.Size(4300, 110);
             _flowLayoutPanel1.TabIndex = 12;
-            
+
             // 
             // Form1
             // 
 
+
             utilizatoriMenu.Controls.Add(_flowLayoutPanel1);
             utilizatoriMenu.Controls.Add(button3);
+            utilizatoriMenu.Controls.Add(button4);
             utilizatoriMenu.Controls.Add(_checkedListBox5);
             utilizatoriMenu.Controls.Add(button2);
             utilizatoriMenu.Controls.Add(label5);
@@ -279,20 +297,13 @@ namespace proiectState
             utilizatoriMenu.Controls.Add(label2);
             utilizatoriMenu.Controls.Add(label1);
             utilizatoriMenu.Controls.Add(_checkedListBox1);
+            
             _form.Controls.Add(utilizatoriMenu);
 
             _joburiFiltrate = new List<Job>();
             _jobs = new List<Job>();
             _imagePaths = new List<string>
             {
-                 "./photo/endava.jpg",
-                 "./photo/fortech.gif",
-                 "./photo/amazon6707.jpg",
-                 "./photo/microsoft.png",
-                 "./photo/conti.png",
-                 "./photo/IBM.png",
-                 "./photo/ness.png",
-                 "/photo/ness.png",
             };
 
             string jsonFile = "./jobs.json";
@@ -391,6 +402,12 @@ namespace proiectState
                 currentPhotoIndex = _flowLayoutPanel1.Controls.Count - 1;
 
             }
+        }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            utilizatoriMenu.Hide(); 
+            IState.SetState(_form.getLoginState, () => _form.getLoginState.CreeazaFereastra(_form));
+
         }
         private string GetImagePathForJob(string jobName)
         {
