@@ -210,7 +210,7 @@ namespace proiectState
         }
         public void adauga()
         {
-            string jsonFile = "C:\\Users\\Oana\\Documents\\an 3\\sem2\\ip\\proiect\\proiectState\\proiectState\\jobs.json";
+            string jsonFile = "./jobs.json";
             string jsonContent = File.ReadAllText(jsonFile);
 
             firme = JsonConvert.DeserializeObject<List<Job>>(jsonContent);

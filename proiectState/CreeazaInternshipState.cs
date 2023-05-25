@@ -430,7 +430,7 @@ namespace proiectState
 
         private void post_Click(object sender, EventArgs e)
         {
-            string jsonFile = "C:\\Users\\Oana\\Documents\\an 3\\sem2\\ip\\proiect\\proiectState\\proiectState\\jobs.json";
+            string jsonFile = "./jobs.json";
             string jsonContent = File.ReadAllText(jsonFile);
             List<Job> firme = JsonConvert.DeserializeObject<List<Job>>(jsonContent);
             string an = "";

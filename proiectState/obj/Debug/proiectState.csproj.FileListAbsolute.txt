@@ -12,3 +12,16 @@ C:\Users\Oana\Documents\an 3\sem2\ip\proiect\proiectState\proiectState\obj\Debug
 C:\Users\Oana\Documents\an 3\sem2\ip\proiect\proiectState\proiectState\obj\Debug\proiectState.csproj.CopyComplete
 C:\Users\Oana\Documents\an 3\sem2\ip\proiect\proiectState\proiectState\obj\Debug\proiectState.exe
 C:\Users\Oana\Documents\an 3\sem2\ip\proiect\proiectState\proiectState\obj\Debug\proiectState.pdb
+D:\Cursuri\Anul III\Semestrul II\IP\proiectIP\proiectState\bin\Debug\proiectState.exe.config
+D:\Cursuri\Anul III\Semestrul II\IP\proiectIP\proiectState\bin\Debug\proiectState.exe
+D:\Cursuri\Anul III\Semestrul II\IP\proiectIP\proiectState\bin\Debug\proiectState.pdb
+D:\Cursuri\Anul III\Semestrul II\IP\proiectIP\proiectState\bin\Debug\Newtonsoft.Json.xml
+D:\Cursuri\Anul III\Semestrul II\IP\proiectIP\proiectState\obj\Debug\proiectState.csproj.AssemblyReference.cache
+D:\Cursuri\Anul III\Semestrul II\IP\proiectIP\proiectState\obj\Debug\proiectState.csproj.SuggestedBindingRedirects.cache
+D:\Cursuri\Anul III\Semestrul II\IP\proiectIP\proiectState\obj\Debug\proiectState.Form1.resources
+D:\Cursuri\Anul III\Semestrul II\IP\proiectIP\proiectState\obj\Debug\proiectState.Properties.Resources.resources
+D:\Cursuri\Anul III\Semestrul II\IP\proiectIP\proiectState\obj\Debug\proiectState.csproj.GenerateResource.cache
+D:\Cursuri\Anul III\Semestrul II\IP\proiectIP\proiectState\obj\Debug\proiectState.csproj.CoreCompileInputs.cache
+D:\Cursuri\Anul III\Semestrul II\IP\proiectIP\proiectState\obj\Debug\proiectState.csproj.CopyComplete
+D:\Cursuri\Anul III\Semestrul II\IP\proiectIP\proiectState\obj\Debug\proiectState.exe
+D:\Cursuri\Anul III\Semestrul II\IP\proiectIP\proiectState\obj\Debug\proiectState.pdb

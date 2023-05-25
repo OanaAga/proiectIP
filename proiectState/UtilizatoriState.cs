@@ -285,17 +285,17 @@ namespace proiectState
             _jobs = new List<Job>();
             _imagePaths = new List<string>
             {
-                 "C:\\Users\\Oana\\Documents\\an 3\\sem2\\ip\\proiect\\proiectState\\proiectState\\photo\\endava.jpg",
-                 "C:\\Users\\Oana\\Documents\\an 3\\sem2\\ip\\proiect\\proiectState\\proiectState\\photo\\fortech.gif",
-                 "C:\\Users\\Oana\\Documents\\an 3\\sem2\\ip\\proiect\\proiectState\\proiectState\\photo\\amazon6707.jpg",
-                 "C:\\Users\\Oana\\Documents\\an 3\\sem2\\ip\\proiect\\proiectState\\proiectState\\photo\\microsoft.png",
-                 "C:\\Users\\Oana\\Documents\\an 3\\sem2\\ip\\proiect\\proiectState\\proiectState\\photo\\conti.png",
-                 "C:\\Users\\Oana\\Documents\\an 3\\sem2\\ip\\proiect\\proiectState\\proiectState\\photo\\IBM.png",
-                 "C:\\Users\\Oana\\Documents\\an 3\\sem2\\ip\\proiect\\proiectState\\proiectState\\photo\\ness.png",
-                 "C:\\Users\\Oana\\Documents\\an 3\\sem2\\ip\\proiect\\proiectState\\proiectState\\photo\\ness.png",
+                 "./photo/endava.jpg",
+                 "./photo/fortech.gif",
+                 "./photo/amazon6707.jpg",
+                 "./photo/microsoft.png",
+                 "./photo/conti.png",
+                 "./photo/IBM.png",
+                 "./photo/ness.png",
+                 "/photo/ness.png",
             };
 
-            string jsonFile = "C:\\Users\\Oana\\Documents\\an 3\\sem2\\ip\\proiect\\proiectState\\proiectState\\jobs.json";
+            string jsonFile = "./jobs.json";
             string jsonContent = File.ReadAllText(jsonFile);
 
             _jobs = JsonConvert.DeserializeObject<List<Job>>(jsonContent);
