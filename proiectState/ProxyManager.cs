@@ -15,7 +15,8 @@ namespace proiectState
         List<Student> _studenti;
         List<Firma> _firme;
         string _tip;
-        object _user;
+        string _userName;
+        string _logoPath;
 
         public ProxyManager() 
         {
@@ -27,14 +28,24 @@ namespace proiectState
 
         }
 
-        public string GetType()
+        public string GetUserType()
         {
             return _tip;
         }
 
-        public Object GetUser()
+        public string GetUserNume()
         {
-            return _user;
+            return _userName;
+        }
+
+        public string GetLogoPath()
+        {
+            if (_logoPath == null)
+                throw new Exception("Logo not found.");
+            else if (_logoPath == null && _tip == "student")
+                throw new Exception("Logged in as a student. No logo available for students.");
+            else
+                return _logoPath;
         }
 
         public string Login(string username, string password)
@@ -43,7 +54,7 @@ namespace proiectState
             {
                 if(s._username == username && s._password == password)
                 {
-                    _user = s;
+                    _userName = s._nume + " " + s._prenume;
                     _tip = "student";
                     return _tip;
                 }
@@ -53,7 +64,8 @@ namespace proiectState
             {
                 if(f._username == username && f._password == password)
                 {
-                    _user = f;
+                    _userName = f._name;
+                    _logoPath = f._logoPath;
                     _tip = "firma";
                     return _tip;
                 }

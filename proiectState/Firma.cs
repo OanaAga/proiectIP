@@ -14,8 +14,10 @@ namespace proiectState
         public string _reprezentant;
         public string _username;
         public string _password;
+        public string _logoPath;
 
-        public Firma(string name, string cui, string email, string reprezentant, string user, string password)
+        public Firma(string name, string cui, string email, string reprezentant, 
+                string user, string password, string logoPath)
         {
             _name = name;
             _cui = cui;
@@ -23,6 +25,7 @@ namespace proiectState
             _reprezentant = reprezentant;
             _username = user;
             _password = password;
+            _logoPath = logoPath;
         }
     }
 }
