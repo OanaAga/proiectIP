@@ -645,6 +645,23 @@ namespace proiectState
             _proxyManager = new ProxyManager();
             return null;
         }
+
+        public string getUserName
+        {
+            get
+            {
+                return _proxyManager.GetUserNume();
+            }
+        }
+
+        public string getLogoPath
+        {
+            get
+            {
+                return _proxyManager.GetUserNume();
+            }
+        }
+
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             try
@@ -652,12 +669,12 @@ namespace proiectState
                 state = _proxyManager.Login(_textBoxUser.Text, Cryptography.HashString(_textBoxPass.Text));
                 _label21.Text = "Autentificat ca " + _textBoxUser.Text + "\n Tip: " + _proxyManager.GetType();
                 _form._firmeState = new FirmeState(_form);
-                if (_proxyManager.GetType() == "firma")
+                if (_proxyManager.GetUserType() == "firma")
                 {
                     _tabControl1.Hide();
                     IState.SetState(_form.getFirmeState, () => _form.getFirmeState.CreeazaFereastra(_form));
                 }
-                else if (_proxyManager.GetType() == "student")
+                else if (_proxyManager.GetUserType() == "student")
                 {
                     _tabControl1.Hide();
                     IState.SetState(_form.getUtilizatoriState, () => _form.getUtilizatoriState.CreeazaFereastra(_form));
@@ -706,8 +723,9 @@ namespace proiectState
             string reprezentant = _textBoxCNumeReprezentant.Text;
             string user = _textBoxCUser.Text;
             string pass = Cryptography.HashString(_textBoxCParola.Text);
+            string logoPath = "-";
 
-            Firma newF = new Firma(name, cui, email, reprezentant, user, pass);
+            Firma newF = new Firma(name, cui, email, reprezentant, user, pass, logoPath);
 
             bool success = _proxyManager.RegisterFirma(newF);
 

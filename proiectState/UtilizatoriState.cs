@@ -32,8 +32,6 @@ namespace proiectState
         System.Windows.Forms.CheckedListBox _checkedListBox5;
         GroupBox _groupBox1;
 
-
-        
         public UtilizatoriState(Form1 form) {
 
             _form=form;
@@ -45,6 +43,8 @@ namespace proiectState
         }
         public override Action CreeazaFereastra(Form1 form)
         {
+            _form.SetDate();
+            
             System.Windows.Forms.Label label1;
             System.Windows.Forms.Label label2;
            

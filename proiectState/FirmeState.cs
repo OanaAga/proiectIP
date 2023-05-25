@@ -59,6 +59,7 @@ namespace proiectState
         }
         public override Action CreeazaFereastra(Form1 form)
         {
+            _form.SetDate();
             System.Windows.Forms.PictureBox logoFirma;
             System.Windows.Forms.Button creeazaInternship;
             System.Windows.Forms.Button button2;
@@ -132,10 +133,11 @@ namespace proiectState
             panel.Dock = DockStyle.Fill;
             anunturi.Controls.Add(panel);
 
+
             foreach (Job job in firme)
             {
 
-                if (job.NumeFirma == "Endava")
+                if (job.NumeFirma == _form.getUserName)
                 {
                     //groupBox anunt
 

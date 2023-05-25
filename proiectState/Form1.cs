@@ -18,6 +18,8 @@ namespace proiectState
         CreeazaInternshipState _creeazaInternshipState;
         AnuntCompletState _anuntCompletState;
         UtilizatoriState _utilizatoriState;
+        string _userNume;
+        string _logoPath;
         public Form1()
         {
             _loginState=new LoginState(this);
@@ -28,6 +30,35 @@ namespace proiectState
             InitializeComponent();
             IState.SetState(_loginState,()=>_loginState.CreeazaFereastra(this));
         }
+        public void SetDate()
+        {
+            _userNume = _loginState.getUserName;
+
+            try
+            {
+                _logoPath = _loginState.getLogoPath;
+            }
+            catch (Exception ex) 
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+        public String getUserName
+        {
+            get
+            {
+                return _userNume;
+            }
+        }
+
+        public String getLogoPath
+        {
+            get
+            {
+                return _logoPath;
+            }
+        }
+
         public GroupBox getPagina
         {
             get
