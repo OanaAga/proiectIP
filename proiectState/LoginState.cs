@@ -647,9 +647,6 @@ namespace proiectState
             _proxyManager = new ProxyManager();
             return null;
         }
-<<<<<<< HEAD
-      
-=======
 
         public string getUserName
         {
@@ -666,8 +663,6 @@ namespace proiectState
                 return _proxyManager.GetUserNume();
             }
         }
-
->>>>>>> f850ed9d7886ca03afaf8805493f6ed4be935dad
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             try

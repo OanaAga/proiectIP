@@ -304,6 +304,14 @@ namespace proiectState
             _jobs = new List<Job>();
             _imagePaths = new List<string>
             {
+                "./photo/endava.jpg",
+                 "./photo/fortech.gif",
+                 "./photo/amazon6707.jpg",
+                 "./photo/microsoft.png",
+                 "./photo/conti.png",
+                 "./photo/IBM.png",
+                 "./photo/ness.png",
+                 "./photo/ness.png",
             };
 
             string jsonFile = "./jobs.json";
