@@ -25,5 +25,6 @@
             _username = user;
             _password = password;
         }
+
     }
 }

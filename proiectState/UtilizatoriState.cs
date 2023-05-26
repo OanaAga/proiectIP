@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 using GroupBox = System.Windows.Forms.GroupBox;
+using System.Text;
 
 namespace proiectState
 {
@@ -464,15 +465,39 @@ namespace proiectState
             linkLabel.Text = "Aplica";
             linkLabel.Size = new Size(200, 20);
             linkLabel.Location = new Point(15, 100);
-            linkLabel.Click += (s, ev) => AdaugareCV();
+            linkLabel.Click += (s, ev) =>
+            {
+                AdaugareCV();
+
+                string candidatiFile = "candidati.json";
+
+                string numeInternship = job.NumeInternship;
+                string numeFirma = job.NumeFirma;
+                string numePrenume = _form.getUserName;
+
+                var obj = new
+                {
+                    NumePrenume = numePrenume
+                    NumeInternship = numeInternship,
+                    NumeFirma = numeFirma,
+                };
+                string candidatiJson = JsonConvert.SerializeObject(obj);
+
+
+                File.WriteAllText(candidatiFile, candidatiJson);
+            };
+
+
+
 
             label.Controls.Add(linkLabel);
-            _groupBox1.Controls.Add(label);
+                _groupBox1.Controls.Add(label);
 
 
         }
         private void AdaugareCV()
         {
+           
             OpenFileDialog openFileDialog = new OpenFileDialog
             {
                 Filter = "PDF Files|*.pdf|Word Documents|*.doc;*.docx"
@@ -498,6 +523,7 @@ namespace proiectState
                 }
 
             }
+            
         }
         private void AfiseazaJob()
         {
@@ -557,6 +583,12 @@ namespace proiectState
             };
 
             _groupBox1.Controls.Add(label);
+
+            String candidati = "candidati.json";
+            String numePrenume = _form.getUserName;
+            String numeInternship = null;
+
+
         }
         private void AddClickablePhoto(string imagePath)
         {
