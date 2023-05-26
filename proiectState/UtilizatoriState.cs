@@ -477,7 +477,7 @@ namespace proiectState
 
                 var obj = new
                 {
-                    NumePrenume = numePrenume
+                    NumePrenume = numePrenume,
                     NumeInternship = numeInternship,
                     NumeFirma = numeFirma,
                 };
@@ -497,7 +497,6 @@ namespace proiectState
         }
         private void AdaugareCV()
         {
-           
             OpenFileDialog openFileDialog = new OpenFileDialog
             {
                 Filter = "PDF Files|*.pdf|Word Documents|*.doc;*.docx"
@@ -506,7 +505,7 @@ namespace proiectState
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string filePath = openFileDialog.FileName;
-                string folder = "C:\\Users\\Denisa\\Desktop\\Proiect_IP\\Student\\Student";
+                string folder = "./documente";
                 string fileName = Path.GetFileName(filePath);
 
                 string destinationPath = Path.Combine(folder, fileName);
@@ -523,7 +522,6 @@ namespace proiectState
                 }
 
             }
-            
         }
         private void AfiseazaJob()
         {

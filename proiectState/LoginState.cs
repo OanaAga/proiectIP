@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace proiectState
@@ -11,6 +12,7 @@ namespace proiectState
     public class LoginState : IState
     {
         ProxyManager _proxyManager;
+        string _imgPath;
         string state;
         System.Windows.Forms.Label _label22;
         System.Windows.Forms.TextBox _textBoxCParola;
@@ -33,18 +35,18 @@ namespace proiectState
         System.Windows.Forms.Label _label21;
         System.Windows.Forms.ComboBox _comboBoxSAn;
         System.Windows.Forms.TabControl _tabControl1;
-        
+
         Form1 _form;
         public LoginState(Form1 form)
         {
             _form = form;
         }
-       
+
         public override Action CreeazaFereastra(Form1 form)
         {
-            
+
             System.Windows.Forms.TabPage Login;
-            
+
             System.Windows.Forms.TabPage registerUser;
             System.Windows.Forms.Label label2;
             System.Windows.Forms.Label label1;
@@ -71,11 +73,13 @@ namespace proiectState
             System.Windows.Forms.Label label17;
             System.Windows.Forms.Label label16;
             System.Windows.Forms.Label label15;
-           
-            
-            
-            
-            
+            System.Windows.Forms.Label label30;
+            System.Windows.Forms.Button adaugaLogo;
+
+
+
+
+
 
             _tabControl1 = new System.Windows.Forms.TabControl();
             Login = new System.Windows.Forms.TabPage();
@@ -117,7 +121,10 @@ namespace proiectState
             label17 = new System.Windows.Forms.Label();
             label16 = new System.Windows.Forms.Label();
             label15 = new System.Windows.Forms.Label();
-            
+            label30 = new System.Windows.Forms.Label();
+            adaugaLogo = new System.Windows.Forms.Button();
+
+
             _textBoxCParola = new System.Windows.Forms.TextBox();
             _textBoxCUser = new System.Windows.Forms.TextBox();
             _textBoxCEmail = new System.Windows.Forms.TextBox();
@@ -130,7 +137,7 @@ namespace proiectState
             Login.SuspendLayout();
             registerUser.SuspendLayout();
             tabPage1.SuspendLayout();
-            
+
             // 
             // tabControl1
             // 
@@ -414,7 +421,7 @@ namespace proiectState
             // 
             // textBoxSSpecializare
             // 
-             _textBoxSSpecializare.Location = new System.Drawing.Point(257, 62);
+            _textBoxSSpecializare.Location = new System.Drawing.Point(257, 62);
             _textBoxSSpecializare.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             _textBoxSSpecializare.Name = "textBoxSSpecializare";
             _textBoxSSpecializare.Size = new System.Drawing.Size(151, 20);
@@ -475,6 +482,8 @@ namespace proiectState
             // 
             tabPage1.Controls.Add(_label22);
             tabPage1.Controls.Add(inregistrareCompanie);
+            tabPage1.Controls.Add(adaugaLogo);
+            tabPage1.Controls.Add(label30);
             tabPage1.Controls.Add(label20);
             tabPage1.Controls.Add(label19);
             tabPage1.Controls.Add(label18);
@@ -526,7 +535,7 @@ namespace proiectState
             // label20
             // 
             label20.AutoSize = true;
-            label20.Location = new System.Drawing.Point(152, 230);
+            label20.Location = new System.Drawing.Point(58, 230);
             label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label20.Name = "label20";
             label20.Size = new System.Drawing.Size(40, 13);
@@ -536,7 +545,7 @@ namespace proiectState
             // label19
             // 
             label19.AutoSize = true;
-            label19.Location = new System.Drawing.Point(152, 188);
+            label19.Location = new System.Drawing.Point(58, 188);
             label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label19.Name = "label19";
             label19.Size = new System.Drawing.Size(32, 13);
@@ -582,10 +591,31 @@ namespace proiectState
             label15.Size = new System.Drawing.Size(88, 13);
             label15.TabIndex = 8;
             label15.Text = "Nume Companie:";
+            //
+            // label30 
+            //
+            label30.AutoSize = true;
+            label30.Location = new System.Drawing.Point(242, 188);
+            label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label30.Name = "label15";
+            label30.Size = new System.Drawing.Size(88, 13);
+            label30.TabIndex = 8;
+            label30.Text = "Incarca logo:";
+            //
+            // adaugaLogo
+            //
+            adaugaLogo.Location = new System.Drawing.Point(242, 203);
+            adaugaLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            adaugaLogo.Name = "adaugaLogo";
+            adaugaLogo.Size = new System.Drawing.Size(56, 19);
+            adaugaLogo.TabIndex = 14;
+            adaugaLogo.Text = "Adauga Logo";
+            adaugaLogo.UseVisualStyleBackColor = true;
+            adaugaLogo.Click += new System.EventHandler(adaugaLogo_Click);
             // 
             // textBoxCParola
             // 
-            _textBoxCParola.Location = new System.Drawing.Point(154, 245);
+            _textBoxCParola.Location = new System.Drawing.Point(61, 245);
             _textBoxCParola.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             _textBoxCParola.Name = "textBoxCParola";
             _textBoxCParola.Size = new System.Drawing.Size(152, 20);
@@ -594,7 +624,7 @@ namespace proiectState
             // 
             // textBoxCUser
             // 
-            _textBoxCUser.Location = new System.Drawing.Point(154, 203);
+            _textBoxCUser.Location = new System.Drawing.Point(61, 203);
             _textBoxCUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             _textBoxCUser.Name = "textBoxCUser";
             _textBoxCUser.Size = new System.Drawing.Size(152, 20);
@@ -667,6 +697,10 @@ namespace proiectState
         {
             try
             {
+                if (_textBoxUser.Text == "" || _textBoxPass.Text == "")
+                {
+                    throw new Exception("Completeaza campurile!");
+                }
                 state = _proxyManager.Login(_textBoxUser.Text, Cryptography.HashString(_textBoxPass.Text));
                 _label21.Text = "Autentificat ca " + _textBoxUser.Text + "\n Tip: " + _proxyManager.GetType();
                 _form._firmeState = new FirmeState(_form);
@@ -690,61 +724,108 @@ namespace proiectState
 
         private void inregistrareStudent_Click(object sender, EventArgs e)
         {
-            string name = _textBoxSNume.Text;
-            string pre = _textBoxSPrenume.Text;
-            string email = _textBoxSEmail.Text;
-            string telefon = _textBoxSTelefon.Text;
-            string fac = _textBoxSFacultate.Text;
-            string spec = _textBoxSSpecializare.Text;
-            string an = _comboBoxSAn.Text;
-            string user = _textBoxSUser.Text;
-            string pass = Cryptography.HashString(_textBoxSParola.Text);
-
-            Student newS = new Student(name, pre, email, telefon, fac, spec, an, user, pass);
-
-            bool success = _proxyManager.RegisterStudent(newS);
-
-            if (success)
+            try
             {
-                _label23.Text = "Succes!";
-                _tabControl1.Hide();
-                IState.SetState(_form.getUtilizatoriState, () => _form.getUtilizatoriState.CreeazaFereastra(_form));
+                if (_textBoxSNume.Text == "" || _textBoxSPrenume.Text == "" || _textBoxSEmail.Text == "" || _textBoxSTelefon.Text == "" ||
+                    _textBoxSFacultate.Text == "" || _textBoxSSpecializare.Text == "" || _comboBoxSAn.Text == "" || _textBoxSUser.Text == "" ||
+                    _textBoxSParola.Text == "")
+                {
+                    throw new Exception("Te rugam sa completezi toate campurile!");
+                }
+                string name = _textBoxSNume.Text;
+                string pre = _textBoxSPrenume.Text;
+                string email = _textBoxSEmail.Text;
+                string telefon = _textBoxSTelefon.Text;
+                string fac = _textBoxSFacultate.Text;
+                string spec = _textBoxSSpecializare.Text;
+                string an = _comboBoxSAn.Text;
+                string user = _textBoxSUser.Text;
+                string pass = Cryptography.HashString(_textBoxSParola.Text);
+
+                Student newS = new Student(name, pre, email, telefon, fac, spec, an, user, pass);
+
+                bool success = _proxyManager.RegisterStudent(newS);
+
+                if (success)
+                {
+                    _label23.Text = "Succes!";
+                    _tabControl1.Hide();
+                    IState.SetState(_form.getUtilizatoriState, () => _form.getUtilizatoriState.CreeazaFereastra(_form));
+                }
             }
-            else
+            catch (Exception ex)
             {
-                _label23.Text = "Ceva a mers gresit!";
+                MessageBox.Show(ex.Message);
             }
+
         }
 
         private void inregistrareCompanie_Click(object sender, EventArgs e)
         {
-            string name = _textBoxCNume.Text;
-            string cui = _textBoxCCUI.Text;
-            string email = _textBoxCEmail.Text;
-            string reprezentant = _textBoxCNumeReprezentant.Text;
-            string user = _textBoxCUser.Text;
-            string pass = Cryptography.HashString(_textBoxCParola.Text);
-            string logoPath = "-";
-
-            Firma newF = new Firma(name, cui, email, reprezentant, user, pass, logoPath);
-
-            bool success = _proxyManager.RegisterFirma(newF);
-
-            if (success)
+            try
             {
-                _label22.Text = "Succes!";
-                _tabControl1.Hide();
-                IState.SetState(_form.getFirmeState, () => _form.getFirmeState.CreeazaFereastra(_form));
+                if (_textBoxCNume.Text == "" || _textBoxCCUI.Text == "" || _textBoxCEmail.Text == "" || _textBoxCNumeReprezentant.Text == "" ||
+                     _textBoxCUser.Text == "" || _textBoxCParola.Text == "")
+                {
+                    throw new Exception("Te rugam sa completezi toate campurile!");
+                }
+                string name = _textBoxCNume.Text;
+                string cui = _textBoxCCUI.Text;
+                string email = _textBoxCEmail.Text;
+                string reprezentant = _textBoxCNumeReprezentant.Text;
+                string user = _textBoxCUser.Text;
+                string pass = Cryptography.HashString(_textBoxCParola.Text);
+                string logoPath;
+                if (_imgPath == "" || _imgPath == null)
+                    throw new Exception("Va rugam sa incarcati logo-ul companiei!");
+                else
+                     logoPath = _imgPath;
+
+
+                Firma newF = new Firma(name, cui, email, reprezentant, user, pass, logoPath);
+
+                bool success = _proxyManager.RegisterFirma(newF);
+
+                if (success)
+                {
+                    _label22.Text = "Succes!";
+                    _tabControl1.Hide();
+                    IState.SetState(_form.getFirmeState, () => _form.getFirmeState.CreeazaFereastra(_form));
+                }
             }
-            else
+            catch (Exception ex)
             {
-                _label22.Text = "Ceva a mers gresit!";
-               
+                MessageBox.Show(ex.Message);
+
             }
         }
 
+        private void adaugaLogo_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = "Image files|*.bmp;*.jpg;*.gif;*.png;*.tif|All files|*.*"
+            };
 
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = openFileDialog.FileName;
+                string folder = "./photo";
+                string fileName = Path.GetFileName(filePath);
 
+                _imgPath = Path.Combine(folder, fileName);
 
+                if (File.Exists(_imgPath))
+                {
+                    MessageBox.Show("Logo-ul a fost incarcat deja.");
+                }
+                else
+                {
+                    File.Copy(filePath, _imgPath);
+                    MessageBox.Show("Logo-ul a fost incarcat cu succes.");
+
+                }
+            }
+        }
     }
 }

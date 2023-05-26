@@ -84,7 +84,7 @@ namespace proiectState
             }
             catch(Exception e)
             {
-                return false;
+                throw new Exception("Ceva nu a mers bine!");
             }
         }
 
@@ -98,7 +98,7 @@ namespace proiectState
             }
             catch(Exception e)
             {
-                return false;
+                throw new Exception("Ceva nu a mers bine!");
             }
         }
         

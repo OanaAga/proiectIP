@@ -6,6 +6,15 @@
     "_reprezentant": "Oana Agapie",
     "_username": "breakfasteria",
     "_password": "u61DC3duClMKvkML7EBMSoxsaqE=",
-    "_logoPath":  "./photo/conti.jpg"
+    "_logoPath": "./photo/conti.jpg"
+  },
+  {
+    "_name": "Iendava",
+    "_cui": "12345678",
+    "_email": "iendava@iendava.com",
+    "_reprezentant": "Oana",
+    "_username": "iendava",
+    "_password": "u61DC3duClMKvkML7EBMSoxsaqE=",
+    "_logoPath": "./photo\\261499336_1073449156736923_5501398221642661014_n.jpg"
   }
 ]
